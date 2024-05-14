@@ -15,7 +15,7 @@ elif valor=='2':
     print(f'A resistência é de: {resultado2}')
 elif valor=='3':
      tensao=float(input('Mostre o valor da tensão: '))
-     resistencia=float(input('Apresente a resistência'))
+     resistencia=float(input('Apresente a resistência: '))
      resultado3=tensao/resistencia
      print(f'A corrente é de: {resultado3}')
 else:
