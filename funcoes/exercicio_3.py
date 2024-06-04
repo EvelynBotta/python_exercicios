@@ -1,15 +1,20 @@
-def calcular_media(n1, n2, n3, n4):
-  media = (n1+n2+n3+n4)/4
-  return media 
-  
-def status_aluno(m):
-    if m >= 5:
-      return 'Aprovado'
+def calcular_media(notas):
+    soma = sum(notas)
+    media = soma / len(notas)
+    return media
+
+def verificar_aprovacao(media):
+    if media >= 5:
+        return f"Aprovado com média {media:.2f}"
     else:
-        return 'Reprovado'
+        return f"Reprovado com média {media:.2f}"
 
-print('Calculadora de Média')
-print('Digite 4 notas: ')
-numeros = []
-numeros.append()
+nome_aluno = input("Digite o nome do aluno: ")
+notas = []
+for i in range(4):
+    nota = float(input(f"Digite a nota {i+1}: "))
+    notas.append(nota)
 
+media = calcular_media(notas)
+resultado = verificar_aprovacao(media)
+print(f"O aluno {nome_aluno} está {resultado}")
